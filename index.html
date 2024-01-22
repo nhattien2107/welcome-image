@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex;">
+    <img src="pe_pub.png" alt="" style="width: 650px;">
+    <h1 style="color: yellow; position: absolute; text-align: center; top: 100px; left: 20px; font-size: 2.5rem;">
+        <span id="username"></span> <br/>
+        Welcome to ~Phong Ưng Bang~
+    </h1>
+
+    <script>
+        const queryString = window.location.search;
+        console.log(queryString);
+        const urlParams = new URLSearchParams(queryString);
+        const username = urlParams.get('username');
+        console.log(username);
+        document.getElementById('username').textContent = username;
+    </script>
+</body>
+</html>
